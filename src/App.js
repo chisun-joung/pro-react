@@ -4,16 +4,31 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var place = "world"
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <h1>Hello {place}</h1>
+    );
+  }
+}
+
+export class GroceryList extends Component {
+  render() {
+    return (
+      <ul>
+        <ListItem quantity="1" name="Bread" />
+        <ListItem quantity="2" name="Eggs" />
+        <ListItem quantity="3" name="Milk" />
+      </ul>
+    )
+  }
+}
+
+class ListItem extends Component {
+  render() {
+    return (
+      <li>
+        {this.props.quantity} x {this.props.name}
+      </li>
     );
   }
 }
