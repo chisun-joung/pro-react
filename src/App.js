@@ -1,35 +1,48 @@
 import React, { Component } from 'react';
+import KanbanBoard from './KanbanBoard';
 import './App.css';
+
+let cardsList = [
+  {
+    id: 1,
+    title: "Read the Book",
+    description: "I should read the whole book",
+    status: "in-progress",
+    tasks: []
+  },
+  {
+    id: 2,
+    title: "Write some code",
+    description: "Code along with the samples in the book",
+    status: "todo",
+    tasks: [
+      {
+        id: 1,
+        name: "ContactList Example",
+        done: true
+      },
+      {
+        id: 2,
+        name: "Kanban Example",
+        done: false
+      },
+      {
+        id: 3,
+        name: "My own experiments",
+        done: false
+      }
+    ]
+  },
+];
 
 class App extends Component {
   render() {
-    var place = "world"
+    
     return (
-      <h1>Hello {place}</h1>
+      <KanbanBoard cards={cardsList}/>
     );
   }
 }
 
-export class GroceryList extends Component {
-  render() {
-    return (
-      <ul>
-        <ListItem quantity="1" name="Bread" />
-        <ListItem quantity="2" name="Eggs" />
-        <ListItem quantity="3" name="Milk" />
-      </ul>
-    )
-  }
-}
-
-class ListItem extends Component {
-  render() {
-    return (
-      <li>
-        {this.props.quantity} x {this.props.name}
-      </li>
-    );
-  }
-}
 
 export default App;
