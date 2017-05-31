@@ -35,6 +35,14 @@ let cardsList = [
       }
     ]
   },
+  {
+    id: 3,
+    title: "This is a new card with a very, very long title, thus, having more than 80 characters",
+    description: "",
+    color: '#318DBD',
+    status: "done",
+    tasks: []
+  },
 ];
 
 class App extends Component {
