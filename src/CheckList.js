@@ -11,7 +11,7 @@ class CheckList extends Component {
         let tasks = this.props.tasks.map((task, taskIndex) => (
             <li key={task.id} className="checklist__task">
                 <input type="checkbox" checked={task.done} onChange={
-                    this.props.taskCallbacks.toggle.bind(null, this.props.chardId, task.id, taskIndex)
+                    this.props.taskCallbacks.toggle.bind(null, this.props.cardId, task.id, taskIndex)
                 } />
                 {task.name}
                 <a href="#" className="checklist__task--remove" onClick={
