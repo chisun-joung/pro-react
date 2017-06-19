@@ -19,6 +19,10 @@ class EditCard extends Component {
     }
 
     handleClose(e){
+        this.props.history.pushState(null,'/');
+    }
+
+    render() {
         return (
             <CardForm draftCard={this.state}
                     buttonLabel="Edit Card"

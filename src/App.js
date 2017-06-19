@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Route } from 'react-router';
-import createBrowserHistory from 'history';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 import KanbanBoardContainer from './KanbanBoardContainer';
 import KanbanBoard from './KanbanBoard';
 import EditCard from './EditCard';

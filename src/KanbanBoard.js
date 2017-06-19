@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import List from './List';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 class KanbanBoard extends Component {
     render() {

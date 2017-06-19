@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import KanbanBoard from './KanbanBoard';
+//import KanbanBoard from './KanbanBoard';
 import 'whatwg-fetch';
 import update from 'react-addons-update';
 import 'babel-polyfill';
@@ -239,6 +239,7 @@ class KanbanBoardContainer extends Component {
     }
 
     render() {
+        console.log(this.props);
         let kanbanBoard = this.props.children && React.cloneElement(this.props.children,{
             cards:this.state.cards,
             taskCallbacks:{
@@ -254,6 +255,7 @@ class KanbanBoardContainer extends Component {
                 persistCardDrag: this.persistCardDrag.bind(this)
             }
         });
+        
         return kanbanBoard; 
                         
     }
