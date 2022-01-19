@@ -19,8 +19,8 @@
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "history": "^1.13.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-router": "^1.0.0"
   }
 }
